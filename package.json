@@ -48,7 +48,7 @@
     "lint:fix": "expo lint --fix",
     "typecheck": "tsc --noEmit",
     "doctor": "npx expo-doctor",
-    "test": "jest",
+    "test": "jest --passWithNoTests --watchman=false",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
