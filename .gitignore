@@ -1,43 +1,131 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+# ==========================
+# Node
+# ==========================
 
-# dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
+# ==========================
 # Expo
+# ==========================
+
 .expo/
+.expo-shared/
 dist/
 web-build/
-expo-env.d.ts
 
-# Native
-.kotlin/
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
+# Expo Native
+android/
+ios/
 
+# Uncomment if using prebuild
+# android/
+# ios/
+
+# ==========================
 # Metro
+# ==========================
+
 .metro-health-check*
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# ==========================
+# Build
+# ==========================
+
+*.apk
+*.aab
+*.ipa
+
+# ==========================
+# Logs
+# ==========================
+
+logs/
+*.log
+
+# ==========================
+# Environment
+# ==========================
+
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Keep the example file
+!.env.example
+
+# ==========================
+# TypeScript
+# ==========================
+
+*.tsbuildinfo
+
+# ==========================
+# Testing
+# ==========================
+
+coverage/
+
+# ==========================
+# Cache
+# ==========================
+
+.cache/
+.parcel-cache/
+
+# ==========================
+# IDE
+# ==========================
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
 
 # macOS
 .DS_Store
-*.pem
 
-# local env files
-.env*.local
+# Windows
+Thumbs.db
 
-# typescript
-*.tsbuildinfo
+# ==========================
+# Supabase
+# ==========================
 
-example
+.supabase/
 
-# generated native folders
-/ios
-/android
+# Never commit local database files
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================
+# EAS
+# ==========================
+
+*.p12
+*.jks
+*.keystore
+
+# Local credentials
+credentials.json
+
+# ==========================
+# Misc
+# ==========================
+
+*.swp
+*.swo
+*.orig
+
+# ==========================
+# Generated
+# ==========================
+
+*.tgz

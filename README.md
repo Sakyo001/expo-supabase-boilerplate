@@ -1,56 +1,362 @@
-# Welcome to your Expo app 👋
+# Expo Supabase Starter
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean, production-ready starter for building mobile applications with **Expo**, **React Native**, and **Supabase**.
 
-## Get started
+> Built with scalability, maintainability, and developer experience in mind.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+- ⚡ Expo SDK 57
+- 📱 React Native
+- 🧭 Expo Router
+- 🔐 Supabase Authentication
+- 🗄️ Supabase Database
+- 🔄 TanStack Query
+- 🐻 Zustand
+- 📝 React Hook Form
+- ✅ Zod Validation
+- 🎨 NativeWind
+- 💾 MMKV Storage
+- 🔒 Expo SecureStore
+- 🌙 Dark Mode Ready
+- 🧩 Feature-Based Architecture
+- 📦 TypeScript
+- 🚀 Production Ready
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+# Tech Stack
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Technology | Purpose |
+|------------|---------|
+| Expo | React Native Framework |
+| Expo Router | File-based Routing |
+| TypeScript | Type Safety |
+| Supabase | Backend & Authentication |
+| TanStack Query | Server State |
+| Zustand | Global State |
+| React Hook Form | Forms |
+| Zod | Validation |
+| NativeWind | Styling |
+| MMKV | Local Storage |
+| SecureStore | Secure Token Storage |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+# Project Structure
 
-When you're ready, run:
+```text
+app/
+├── (auth)/
+├── (tabs)/
+├── (onboarding)/
+├── (modals)/
+├── _layout.tsx
+├── +not-found.tsx
+└── index.tsx
 
-```bash
-npm run reset-project
+assets/
+├── fonts/
+├── icons/
+└── images/
+
+src/
+├── components/
+├── config/
+├── constants/
+├── features/
+├── hooks/
+├── lib/
+├── providers/
+├── services/
+├── store/
+├── theme/
+├── types/
+├── utils/
+└── validation/
+
+supabase/
+├── functions/
+├── migrations/
+├── config.toml
+└── seed.sql
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+# Getting Started
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 1. Clone the repository
 
-## Learn more
+```bash
+git clone https://github.com/yourusername/expo-supabase-starter.git
 
-To learn more about developing your project with Expo, look at the following resources:
+cd expo-supabase-starter
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 2. Install dependencies
 
-## Join the community
+```bash
+npm install
+```
 
-Join our community of developers creating universal apps.
+or
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+yarn
+```
+
+or
+
+```bash
+pnpm install
+```
+
+---
+
+## 3. Configure Environment Variables
+
+Create a `.env` file.
+
+```env
+EXPO_PUBLIC_SUPABASE_URL=
+
+EXPO_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+---
+
+## 4. Start the project
+
+```bash
+npx expo start
+```
+
+---
+
+# Folder Guide
+
+## app/
+
+Contains all routes managed by Expo Router.
+
+```text
+(auth)         Authentication screens
+
+(tabs)         Main application
+
+(onboarding)   First-time user flow
+
+(modals)       Modal screens
+```
+
+---
+
+## src/features
+
+Each feature owns its own business logic.
+
+Example:
+
+```text
+profile/
+├── components/
+├── hooks/
+├── services/
+├── types/
+└── index.ts
+```
+
+---
+
+## src/components
+
+Reusable UI components.
+
+Example:
+
+```text
+Button
+
+Input
+
+Card
+
+Avatar
+
+Loader
+```
+
+---
+
+## src/services
+
+Application services.
+
+```text
+auth.ts
+
+profile.ts
+
+storage.ts
+```
+
+No screen should directly communicate with Supabase.
+
+---
+
+## src/store
+
+Application state using Zustand.
+
+Example:
+
+```text
+auth.ts
+
+app.ts
+```
+
+---
+
+## src/lib
+
+Application configuration.
+
+```text
+supabase.ts
+
+query-client.ts
+
+env.ts
+```
+
+---
+
+# Authentication
+
+Supports:
+
+- Email & Password
+- Magic Link
+- Google OAuth
+- Apple Sign In (optional)
+
+Authentication is handled by Supabase Auth.
+
+---
+
+# State Management
+
+## Server State
+
+TanStack Query
+
+Used for:
+
+- Profiles
+- Posts
+- Notifications
+- Messages
+
+---
+
+## Client State
+
+Zustand
+
+Used for:
+
+- User session
+- Theme
+- Preferences
+
+---
+
+# Styling
+
+NativeWind
+
+Example:
+
+```tsx
+<View className="flex-1 items-center justify-center">
+    <Text>Hello World</Text>
+</View>
+```
+
+---
+
+# Database
+
+Supabase
+
+Recommended:
+
+- Enable Row Level Security (RLS)
+- Use Migrations
+- Never expose service role keys
+
+---
+
+# Scripts
+
+```bash
+npm run start
+
+npm run android
+
+npm run ios
+
+npm run web
+
+npm run lint
+
+npm run typecheck
+
+npm run test
+```
+
+---
+
+# Production Checklist
+
+- [ ] Configure Supabase Authentication
+- [ ] Enable Row Level Security
+- [ ] Configure Deep Linking
+- [ ] Configure Push Notifications
+- [ ] Configure Error Monitoring
+- [ ] Configure Analytics
+- [ ] Configure EAS Build
+- [ ] Configure EAS Update
+
+---
+
+# Recommended Packages
+
+- Expo Router
+- Supabase
+- TanStack Query
+- Zustand
+- NativeWind
+- React Hook Form
+- Zod
+- MMKV
+- SecureStore
+- Reanimated
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+Feel free to open an issue or submit a pull request.
+
+---
+
+# License
+
+MIT License.
