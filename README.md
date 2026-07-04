@@ -349,13 +349,19 @@ npm run test
 
 ---
 
-# Contributing
+## Architecture
 
-Contributions are welcome.
+For a detailed overview of the project structure and application flow, see:
 
-Feel free to open an issue or submit a pull request.
+📖 **[Architecture Guide](docs/architecture.md)**
 
----
+## Contributing
+
+Contributions are always welcome!
+
+Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** before opening an issue or submitting a pull request.
+
+
 
 # License
 
